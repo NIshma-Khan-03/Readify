@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Readify - Your ultimate book recommendation and reading tracker platform">
+        <title>Readify - Home</title>
+        
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/icon-192.png">
+        
+        <link rel="manifest" href="manifest.json">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/animations.css">
+    </head>
+
+
+    <body>
+
+        <nav class="navbar">
+
+            <div class="nav-container">
+
+                <div class="logo">
+                    <img src="images/logo.png" alt="Readify Logo">
+                    <span class="logo-text">Readify</span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="homepage.html" class="active">Home</a></li>
+                    <li><a href="book-explorer.html">Book Explorer</a></li>
+                    <li><a href="reading-tracker.html">Progress Tracker</a></li>
+                    <li><a href="rand-recomm.html">Recommender</a></li>
+                    <li><a href="reading-flow.html">Reading Flow</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="hero-text">
+
+                        <h1>Welcome to Readify!</h1>
+
+                        <div class="quote-box" id="quote-box">
+                            <p class="quote">"A reader lives a thousand lives before he dies."</p>
+                            <p class="author">— George R.R. Martin</p>
+                        </div>
+
+                        <div class="quote-dots" id="quote-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                            <span class="dot" data-index="3"></span>
+                        </div>
+
+                        <a href="book-explorer.html" class="btn btn-hero">Start Exploring →</a>
+
+                    </div>
+
+                    <div class="hero-image">
+                        <img src="images/hero-reading.jpg" alt="Reading scene">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="section">
+
+            <div class="container">
+
+                <h2 class="text-center">Author of the Day</h2>
+
+                <div class="author-card" id="author-card">
+
+                    <img src="images/author-default.jpg" alt="Author" class="author-image">
+
+                    <div class="author-info">
+
+                        <h3 id="author-name">Loading...</h3>
+                        <p id="author-bio">Discovering today's featured author...</p>
+
+                        <div class="author-books">
+
+                            <strong>Notable Works:</strong>
+                            <ul id="author-books-list">
+                                <li>Loading...</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="section quick-links">
+
+            <div class="container">
+
+                <h2 class="text-center">What would you like to do?</h2>
+
+                <div class="links-grid">
+
+                    <a href="book-explorer.html" class="link-card">
+                        <div class="icon">📖</div>
+                        <h3>Explore Books</h3>
+                        <p>Browse our collection</p>
+                    </a>
+
+                    <a href="reading-tracker.html" class="link-card">
+                        <div class="icon">📊</div>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your reading</p>
+                    </a>
+
+                    <a href="rand-recomm.html" class="link-card">
+                        <div class="icon">🎲</div>
+                        <h3>Get Recommendation</h3>
+                        <p>Find your next read</p>
+                    </a>
+
+                    <a href="reading-flow.html" class="link-card">
+                        <div class="icon">🎵</div>
+                        <h3>Reading Flow</h3>
+                        <p>Set the mood</p>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <footer>
+
+            <div class="footer-content">
+
+                <div class="footer-section">
+                    <h3>Readify</h3>
+                    <p>Your companion for a better reading journey.</p>
+                </div>
+                
+                <div class="footer-section">
+
+                    <h3>Follow Us</h3>
+                    <p>Stay connected with our community!</p>
+
+                    <div class="social-links">
+                        
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        
+                        <a href="#" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+                
+                <div class="footer-section">
+
+                    <h3>Quick Links</h3>
+                    
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="book-explorer.html">Book Explorer</a></li>
+                        <li><a href="reading-tracker.html">Progress Tracker</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+
+                </div>
+                
+                <div class="footer-section">
+
+                    <h3>Newsletter</h3>
+                    <p>Get book recommendations!</p>
+                    
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+                        
+            <div class="footer-bottom">
+                <p>&copy; 2025 Readify. Made with ❤️ for book lovers.</p>
+            </div>
+
+        </footer>
+
+
+        <script src="js/homepage.js"></script>
+        <script src="js/main.js"></script>
+
+
+    </body>
+
+
+</html>
