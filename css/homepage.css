@@ -1,0 +1,262 @@
+
+
+/* Homepage Styles*/
+
+/* hero section */
+.hero {
+  background: linear-gradient(135deg, var(--terracotta), var(--burnt-sienna));
+  padding: 80px 0;
+  color: white;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+
+/* Quote Box */
+.quote-box {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--charcoal);
+  margin-bottom: 15px;
+  line-height: 1.5;
+  position: relative;
+}
+
+.quote::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--terracotta);
+  opacity: 0.3;
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  font-family: Georgia, serif;
+}
+
+.author {
+  color: var(--terracotta);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+
+/* Quote Dots */
+.quote-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: white;
+  transform: scale(1.3);
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Hero Button */
+.btn-hero {
+  background: white;
+  color: var(--sage);
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-hero:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  background: var(--cream);
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  margin-left: auto;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* author of the day section */
+.author-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.author-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.author-info h3 {
+  color: var(--terracotta);
+  margin-bottom: 10px;
+}
+
+.author-info p {
+  color: var(--charcoal);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.author-books {
+  margin-top: 15px;
+}
+
+.author-books strong {
+  color: var(--sage);
+}
+
+.author-books ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.author-books li {
+  margin-bottom: 5px;
+  color: var(--charcoal);
+}
+
+/* quick links section */
+.quick-links {
+  background: white;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.link-card {
+  background: linear-gradient(135deg, var(--cream), white);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid var(--sage);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+}
+
+.link-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-color: var(--terracotta);
+}
+
+.link-card .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.link-card h3 {
+  color: var(--terracotta);
+  margin-bottom: 10px;
+}
+
+.link-card p {
+  color: var(--charcoal);
+  margin: 0;
+}
+
+/* responsive actions */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-image {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .author-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .author-image {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
+}

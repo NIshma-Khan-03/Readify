@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explore and discover your next favorite book on Readify">
+        <title>Book Explorer - Readify</title>
+        
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/icon-192.png">
+        
+        <link rel="manifest" href="manifest.json">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/book-explorer.css">
+        <link rel="stylesheet" href="css/animations.css">
+    </head>
+
+
+
+    <body>
+
+        <nav class="navbar">
+
+            <div class="nav-container">
+
+                <div class="logo">
+                    <img src="images/logo.png" alt="Readify Logo">
+                    <span class="logo-text">Readify</span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="book-explorer.html" class="active">Book Explorer</a></li>
+                    <li><a href="reading-tracker.html">Progress Tracker</a></li>
+                    <li><a href="rand-recomm.html">Recommender</a></li>
+                    <li><a href="reading-flow.html">Reading Flow</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <section class="page-header">
+
+            <div class="container">
+                <h1>📖 Book Explorer</h1>
+                <p>Discover your next great read from our curated collection</p>
+            </div>
+
+        </section>
+
+
+        <section class="search-section">
+
+            <div class="container">
+
+                <div class="search-bar">
+
+                    <input type="text" id="search-input" placeholder="Search by title or author...">
+
+                    <button class="btn btn-primary" id="search-btn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+
+                </div>
+                
+                <div class="filters">
+
+                    <select id="genre-filter">
+                        <option value="all">All Genres</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="romance">Romance</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="historical">Historical</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                    </select>
+                    
+                    <select id="sort-filter">
+                        <option value="title">Sort by Title</option>
+                        <option value="author">Sort by Author</option>
+                        <option value="rating">Sort by Rating</option>
+                    </select>
+                    
+                    <button class="btn btn-secondary" id="reset-btn">Reset</button>
+
+                </div>
+                
+                <p class="results-count" id="results-count">Showing 0 books</p>
+
+            </div>
+
+        </section>
+
+
+        <section class="books-section">
+
+            <div class="container">
+
+                <div class="books-grid" id="books-grid">
+                    <!-- books will be loaded by javascript -->
+                </div>
+                
+                <div class="no-results" id="no-results" style="display: none;">
+                    <i class="fas fa-book-open"></i>
+                    <h3>No books found</h3>
+                    <p>Try different search terms or filters</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <div class="modal" id="book-modal">
+
+            <div class="modal-overlay" id="modal-overlay"></div>
+
+            <div class="modal-content">
+
+                <button class="modal-close" id="modal-close">&times;</button>
+                
+                <div class="modal-body">
+
+                    <div class="modal-left">
+                        <img id="modal-cover" src="" alt="Book cover">
+                        <div class="modal-rating" id="modal-rating"></div>
+                    </div>
+                    
+                    <div class="modal-right">
+
+                        <h2 id="modal-title">Book Title</h2>
+                        <p class="modal-author">by <span id="modal-author">Author</span></p>
+                        <span class="modal-genre" id="modal-genre">Genre</span>
+                        
+                        <div class="modal-section">
+                            <h3>Synopsis</h3>
+                            <p id="modal-synopsis">Description...</p>
+                        </div>
+                        
+                        <div class="modal-section" id="series-section" style="display: none;">
+                            <h3>Series Information</h3>
+                            <div id="series-content"></div>
+                        </div>
+                        
+                        <div class="modal-section">
+
+                            <h3>Reviews</h3>
+
+                            <table class="reviews-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>Reviewer</th>
+                                        <th>Rating</th>
+                                        <th>Review</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="reviews-body">
+                                    <!-- reviews will be loaded from js as well -->
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <footer>
+            <div class="footer-content">
+
+                <div class="footer-section">
+                    <h3>Readify</h3>
+                    <p>Your companion for a better reading journey.</p>
+                </div>
+                
+                <div class="footer-section">
+
+                    <h3>Follow Us</h3>
+                    <p>Stay connected with our community!</p>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <a href="#" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        
+                    </div>
+
+                </div>
+                
+                <div class="footer-section">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="book-explorer.html">Book Explorer</a></li>
+                        <li><a href="reading-tracker.html">Progress Tracker</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+
+                </div>
+                
+                <div class="footer-section">
+
+                    <h3>Newsletter</h3>
+                    <p>Get book recommendations!</p>
+
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+
+                </div>
+
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Readify. Made with ❤️ for book lovers.</p>
+            </div>
+
+        </footer>
+
+        
+        <div id="modal-close">Close</div>
+        <div id="modal-overlay"></div>
+
+
+        <script src="js/main.js"></script>
+        <script src="js/book-explorer.js"></script>
+
+    </body>
+
+</html>
