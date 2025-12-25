@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Create the perfect reading atmosphere with Readify">
+        <title>Reading Flow - Readify</title>
+        
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/icon-192.png">
+        
+        <link rel="manifest" href="manifest.json">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/reading-flow.css">
+        <link rel="stylesheet" href="css/animations.css">
+
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            
+            <div class="nav-container">
+
+                <div class="logo">
+                    <img src="images/logo.png" alt="Readify Logo">
+                    <span class="logo-text">Readify</span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="book-explorer.html">Book Explorer</a></li>
+                    <li><a href="reading-tracker.html">Progress Tracker</a></li>
+                    <li><a href="rand-recomm.html">Recommender</a></li>
+                    <li><a href="reading-flow.html" class="active">Reading Flow</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <section class="page-header">
+
+            <div class="container">
+                <h1>🎵 Reading Flow</h1>
+                <p>Create the perfect ambiance for your reading session</p>
+            </div>
+
+        </section>
+
+
+        <section class="flow-section">
+
+            <div class="container">
+
+                <div class="flow-grid">
+                    
+                    <div class="flow-card">
+
+                        <h2>🎧 Cozy Ambient Sounds</h2>
+                        <p class="subtitle">Click to play/pause relaxing background sounds</p>
+                        
+                        <div class="sounds-grid">
+
+                            <button class="sound-btn" data-sound="rain">
+                                <i class="fas fa-cloud-rain"></i>
+                                <span>Rain</span>
+                                <div class="sound-status">▶</div>
+                            </button>
+                            
+                            <button class="sound-btn" data-sound="fireplace">
+                                <i class="fas fa-fire"></i>
+                                <span>Fireplace</span>
+                                <div class="sound-status">▶</div>
+                            </button>
+                            
+                            <button class="sound-btn" data-sound="cafe">
+                                <i class="fas fa-coffee"></i>
+                                <span>Coffee Shop</span>
+                                <div class="sound-status">▶</div>
+                            </button>
+                            
+                            <button class="sound-btn" data-sound="ocean">
+                                <i class="fas fa-water"></i>
+                                <span>Ocean Waves</span>
+                                <div class="sound-status">▶</div>
+                            </button>
+                            
+                            <button class="sound-btn" data-sound="forest">
+                                <i class="fas fa-tree"></i>
+                                <span>Forest</span>
+                                <div class="sound-status">▶</div>
+                            </button>
+                            
+                            <button class="sound-btn" data-sound="thunder">
+                                <i class="fas fa-bolt"></i>
+                                <span>Thunder</span>
+                                <div class="sound-status">▶</div>
+                            </button>
+
+                        </div>
+                        
+                        <div class="volume-control">
+                            <i class="fas fa-volume-down"></i>
+                            <input type="range" id="volume-slider" min="0" max="100" value="50">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        
+                        <div class="info-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Note: Sounds are simulated. For real ambient sounds, use YouTube or Spotify!</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="flow-card">
+
+                        <h2>📚 Completed Books</h2>
+                        <p class="subtitle">Track the books you've finished reading</p>
+                        
+                        <form id="add-book-form" class="add-book-form">
+
+                            <div class="form-group">
+                                <input type="text" id="completed-book-title" placeholder="Enter book title..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="date" id="completion-date" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Add to Completed
+                            </button>
+
+                        </form>
+                        
+                        <div class="completed-stats">
+
+                            <div class="stat-item">
+                                <div class="stat-number" id="total-books">0</div>
+                                <div class="stat-label">Books Read</div>
+                            </div>
+
+                            <div class="stat-item">
+                                <div class="stat-number" id="this-month">0</div>
+                                <div class="stat-label">This Month</div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="completed-list" id="completed-list">
+                            <!-- completed books appear here -->
+                        </div>
+                        
+                        <div class="empty-state" id="empty-state">
+                            <i class="fas fa-book-open"></i>
+                            <p>No completed books yet. Start adding!</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <footer>
+
+            <div class="footer-content">
+
+                <div class="footer-section">
+                    <h3>Readify</h3>
+                    <p>Your companion for a better reading journey.</p>
+                </div>
+                
+                <div class="footer-section">
+
+                    <h3>Follow Us</h3>
+                    <p>Stay connected with our community!</p>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <a href="#" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+                
+                <div class="footer-section">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="book-explorer.html">Book Explorer</a></li>
+                        <li><a href="reading-tracker.html">Progress Tracker</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+
+                </div>
+                
+                <div class="footer-section">
+
+                    <h3>Newsletter</h3>
+                    <p>Get book recommendations!</p>
+
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Readify. Made with ❤️ for book lovers.</p>
+            </div>
+
+        </footer>
+
+
+        <script src="js/main.js"></script>
+        <script src="js/reading-flow.js"></script>
+
+    </body>
+
+</html>

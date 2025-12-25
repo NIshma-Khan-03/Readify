@@ -1,0 +1,360 @@
+
+/* ===== Reading Flow Styles ===== */
+
+/* header */
+.page-header {
+  background: linear-gradient(135deg, #8a9e7a, var(--sage));
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+/* flow section */
+.flow-section {
+  padding: 60px 0;
+  background: var(--cream);
+  min-height: 70vh;
+}
+
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+}
+
+.flow-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.flow-card h2 {
+  color: var(--charcoal);
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  color: var(--charcoal);
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+/* ambient sounds */
+.sounds-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.sound-btn {
+  background: linear-gradient(135deg, var(--cream), white);
+  border: 2px solid var(--sage);
+  border-radius: 12px;
+  padding: 25px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.sound-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-color: var(--sage);
+}
+
+.sound-btn.active {
+  background: linear-gradient(135deg, var(--sage), #8a9e7a);
+  border-color: var(--sage);
+  color: white;
+}
+
+.sound-btn i {
+  font-size: 2.5rem;
+  color: var(--sage);
+  transition: color 0.3s ease;
+}
+
+.sound-btn.active i {
+  color: white;
+  animation: pulse 2s ease infinite;
+}
+
+.sound-btn span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.sound-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: var(--terracotta);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.sound-btn.active .sound-status {
+  background: var(--gold);
+}
+
+/* volume control */
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: var(--cream);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.volume-control i {
+  color: var(--sage);
+  font-size: 1.2rem;
+}
+
+#volume-slider {
+  flex: 1;
+  height: 6px;
+  border-radius: 5px;
+  outline: none;
+  background: linear-gradient(to right, var(--sage) 50%, #ddd 50%);
+}
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--sage);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: var(--terracotta);
+}
+
+/* info box */
+.info-box {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.info-box i {
+  color: #856404;
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.info-box p {
+  color: #856404;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* completed book section */
+.add-book-form {
+  background: var(--cream);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.add-book-form .form-group {
+  margin-bottom: 15px;
+}
+
+.add-book-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--sage);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
+
+.add-book-form input:focus {
+  outline: none;
+  border-color: var(--terracotta);
+}
+
+.add-book-form button {
+  width: 100%;
+  padding: 12px;
+}
+
+/* status */
+.completed-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  background: linear-gradient(135deg, var(--sage), #8a9e7a);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+
+/* completed book list */
+.completed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.completed-item {
+  background: var(--cream);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--sage);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.completed-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.completed-item-info h4 {
+  color: var(--charcoal);
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.completed-item-date {
+  color: var(--charcoal);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.delete-btn {
+  background: var(--terracotta);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: var(--burnt-sienna);
+  transform: scale(1.1);
+}
+
+
+/* empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--charcoal);
+  opacity: 0.5;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+/* ===== SCROLLBAR ===== */
+.completed-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.completed-list::-webkit-scrollbar-track {
+  background: var(--cream);
+  border-radius: 10px;
+}
+
+.completed-list::-webkit-scrollbar-thumb {
+  background: var(--sage);
+  border-radius: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .flow-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sounds-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .completed-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sounds-grid {
+    grid-template-columns: 1fr;
+  }
+}
