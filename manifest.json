@@ -1,0 +1,34 @@
+
+{
+    "name": "Readify - Your Reading Companion",
+    "short_name": "Readify",
+    "description": "Track your reading progress, discover new books, and create the perfect reading atmosphere",
+    "start_url": "/homepage.html",
+    "display": "standalone",
+    "bankground_color": "#F5F1E8",
+    "theme_color": "#C85A54",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "images/icon-192.png",
+            "sizes": "192x192",
+            "type": "images/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/icon-512.png",
+            "sizes": "512x512",
+            "type": "images/png",
+            "purpose": "any maskable"
+        }
+    ],
+
+    "categories": [
+        "books",
+        "education",
+        "productivity"
+    ],
+
+    "lang": "en-US",
+    "dir": "ltr"
+}
