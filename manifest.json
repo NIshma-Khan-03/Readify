@@ -3,7 +3,7 @@
     "name": "Readify - Your Reading Companion",
     "short_name": "Readify",
     "description": "Track your reading progress, discover new books, and create the perfect reading atmosphere",
-    "start_url": "/homepage.html",
+    "start_url": "/index.html",
     "display": "standalone",
     "bankground_color": "#F5F1E8",
     "theme_color": "#C85A54",
