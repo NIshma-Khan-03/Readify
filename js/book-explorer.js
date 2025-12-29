@@ -1,7 +1,7 @@
-// ===== SAMPLE BOOK DATA FOR READIFY =====
-// This will go in book-explorer.js
 
+// ===== Book Explorer JavaScript =====
 
+// books data
 const booksData = [
   {
     id: 1,
@@ -141,7 +141,7 @@ const booksData = [
 let filteredBooks = [...booksData];
 
 
-// =displaying books
+// displaying books
 function displayBooks(books) {
   const grid = document.getElementById('books-grid');
   const noResults = document.getElementById('no-results');
@@ -173,7 +173,7 @@ function displayBooks(books) {
 }
 
 
-// search filter
+// search and filter
 function searchAndFilter() {
   const searchTerm = document.getElementById('search-input').value.toLowerCase();
   const genre = document.getElementById('genre-filter').value;
@@ -183,7 +183,12 @@ function searchAndFilter() {
   filteredBooks = booksData.filter(book => {
     const matchesSearch = book.title.toLowerCase().includes(searchTerm) || 
                          book.author.toLowerCase().includes(searchTerm);
-    const matchesGenre = genre === 'all' || book.genre === genre;
+    
+
+    // hendling single/multiple genres
+    const bookGenres = Array.isArray(book.genres) ? book.genres : [book.genre];
+    const matchesGenre = genre === 'all' || bookGenres.includes(genre);
+    
     return matchesSearch && matchesGenre;
   });
   
@@ -205,18 +210,23 @@ function openModal(bookId) {
   const book = booksData.find(b => b.id === bookId);
   if (!book) return;
   
-  // filling modal with book data
+
   document.getElementById('modal-cover').src = book.cover;
   document.getElementById('modal-title').textContent = book.title;
   document.getElementById('modal-author').textContent = book.author;
-  document.getElementById('modal-genre').textContent = book.genre;
+  
+
+  // genres
+  const genreText = Array.isArray(book.genres) ? book.genres.join(', ') : book.genre;
+  document.getElementById('modal-genre').textContent = genreText;
   document.getElementById('modal-synopsis').textContent = book.synopsis;
   
-  // display rating stars
+  // ratings
   const stars = '⭐'.repeat(Math.round(book.rating));
   document.getElementById('modal-rating').textContent = `${stars} (${book.rating}/5)`;
   
-  
+
+  // Series information
   const seriesSection = document.getElementById('series-section');
   if (book.series && (book.series.prequels?.length > 0 || book.series.sequels?.length > 0)) {
     seriesSection.style.display = 'block';
@@ -240,7 +250,8 @@ function openModal(bookId) {
     seriesSection.style.display = 'none';
   }
   
-  // reviews table
+
+  // Reviews table
   const reviewsBody = document.getElementById('reviews-body');
   reviewsBody.innerHTML = book.reviews.map(review => `
     <tr>
@@ -285,14 +296,14 @@ document.getElementById('modal-close').addEventListener('click', closeModal);
 document.getElementById('modal-overlay').addEventListener('click', closeModal);
 
 
+// closing modal
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeModal();
   }
 });
 
-
-// displaying books with loading page
+// displaying books after loading the page
 window.addEventListener('DOMContentLoaded', () => {
   displayBooks(booksData);
 });
