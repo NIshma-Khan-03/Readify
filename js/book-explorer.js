@@ -22,7 +22,7 @@ const booksData = [
     id: 2,
     title: "The Hobbit",
     author: "J.R.R. Tolkien",
-    genres: ["fantasy", "fiction", "adventure"],
+    genres: "fantasy",
     rating: 4.8,
     cover: "images/books/hobbit.jpg",
     synopsis: "In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole, and that meant comfort. Bilbo Baggins is swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug.",
@@ -134,6 +134,171 @@ const booksData = [
       { reviewer: "Michelle A.", rating: 5, review: "Inspiring and powerful memoir" },
       { reviewer: "Daniel K.", rating: 5, review: "Couldn't believe this was a true story" },
       { reviewer: "Olivia M.", rating: 4, review: "Remarkable journey of self-discovery" }
+    ]
+  },
+  {
+    id: 9,
+    title: "The Good Daughters: A Novel",
+    author: "Brigitte Dale",
+    genre: "historical",
+    rating: 4.2,
+    cover: "images/books/the-good-daughters.jpg",
+    synopsis: "A vivid historical novel set in 1912 London, The Good Daughters follows three young women from vastly different backgrounds who are drawn together by the suffrage movement and a shared desire to control their own futures. As Charlotte, Beatrice, and Emily confront restrictive laws, forbidden love, and brutal resistance—including imprisonment and hunger strikes—their courage and friendship are pushed to the breaking point. The novel powerfully explores how far women are willing to go to claim freedom, dignity, and one another.",
+    series: null,
+    reviews: [
+      { reviewer: "Kayle R.", rating: 4, review: "love a story about women who fought for the right to vote!" },
+      { reviewer: "Cindy M.", rating: 5, review: "Loved it from beginning to end." },
+      { reviewer: "Nico D.", rating: 5, review: "This is beautifully written!!" }
+    ]
+  },
+  {
+    id: 10,
+    title: "Powerless",
+    author: "Lauren Roberts",
+    genre: "fantasy",
+    rating: 4.1,
+    cover: "images/books/powerless.jpg",
+    synopsis: "Powerless is a high-stakes fantasy set in a kingdom where only the gifted are allowed to exist, and being Ordinary is a crime. Paedyn Gray survives by pretending to be a Psychic—until saving a prince thrusts her into deadly trials designed to celebrate powers she doesn’t have. As danger, deception, and forbidden attraction collide, Paedyn must fight to stay alive while hiding the truth that could get her killed.",
+    series: {
+      prequels: [],
+      sequels: [
+        "Reckless",
+        "Fearless"
+      ]
+    },
+    reviews: [
+      { reviewer: "Brooke B.", rating: 3.5, review: "A tense, fast-paced fantasy where survival depends on deception, Powerless delivers deadly trials, forbidden romance, and a sharp divide between power and privilege."},
+      { reviewer: "Maya A.", rating: 5, review: "A tense, fast-paced fantasy where survival depends on deception, Powerless delivers deadly trials, forbidden romance, and a sharp divide between power and privilege" },
+      { reviewer: "Nico D.", rating: 4, review: "Dark, dramatic, and emotionally charged, Powerless explores what it means to be strong in a world that only values power." }
+    ]
+  },
+  {
+    id: 11,
+    title: "The Maid",
+    author: "Nita Prose",
+    genre: "mystery",
+    rating: 3.7,
+    cover: "images/books/the-maid.jpg",
+    synopsis: "The Maid follows Molly Gray, a socially awkward but meticulous hotel maid whose orderly world collapses when she discovers a wealthy guest dead in his room and becomes the prime suspect. As she navigates a confusing investigation, unexpected friendships help her uncover the truth. The novel blends a cozy, locked-room mystery with a touching story about difference, kindness, and belonging.",
+    series: {
+      prequels: [],
+      sequels: [
+        "The Mystery Guest: A Maid Novel",
+        "The Maid's Secret: A Maid Novel"
+      ]
+    },
+    reviews: [
+      { reviewer: "Bobby S.", rating: 5, review: "A cozy mystery with a kind, unforgettable main character."},
+      { reviewer: "Maya A.", rating: 4, review: "Charming, emotional, and easy to read, with a clever twist." },
+      { reviewer: "Nico D.", rating: 3, review: "A warm-hearted mystery about being different and finding friends." }
+    ]
+  },
+  {
+    id: 12,
+    title: "The Love Hypothesis",
+    author: "Ali Hazelwood",
+    genre: "romance",
+    rating: 4.1,
+    cover: "images/books/love-hypothesis.jpg",
+    synopsis: "When a fake relationship between scientists meets the irresistible force of attraction, it throws one woman's carefully calculated theories on love into chaos.",
+    series: null,
+    reviews: [
+      { reviewer: "Hana J.", rating: 5, review: "A fun, lighthearted romance with fake dating, slow burn, and lots of charm."},
+      { reviewer: "William A.", rating: 5, review: "Smart, sweet, and humorous, with great chemistry between the leads." },
+      { reviewer: "Millie B.", rating: 4.5, review: "A cozy rom-com that blends academia, romance, and emotional growth." }
+    ]
+  },
+  {
+    id: 13,
+    title: "The Hunger Games",
+    author: "Suzanne Collins",
+    genre: "sci-fi",
+    rating: 4.3,
+    cover: "images/books/hunger-games.jpg",
+    synopsis: "The Hunger Games is a dystopian novel set in Panem, where the Capitol forces children from twelve districts to fight to the death for entertainment and control. When Katniss Everdeen volunteers to save her sister, she must rely on survival skills and moral strength to endure the Games. As she fights to stay alive, she is forced to choose between survival, compassion, and love.",
+    series: {
+      prequels: [],
+      sequels: [
+        "Catching Fire",
+        "Mockingjay",
+        "The Ballad of Songbirds and Snakes",
+        "Sunrise on Reaping"
+      ]
+    },
+    reviews: [
+      { reviewer: "Emma S.", rating: 5, review: "A gripping dystopian story with high stakes and a strong heroine."},
+      { reviewer: "Bucky B.", rating: 4, review: "Dark, emotional, and impossible to put down." },
+      { reviewer: "Peter J.", rating: 3, review: "A powerful blend of action, sacrifice, and rebellion." }
+    ]
+  },
+  {
+    id: 14,
+    title: "Rich Dad, Poor Dad",
+    author: "Robert T.Kiyosaki",
+    genre: "non-fiction",
+    rating: 4.0,
+    cover: "images/books/richdad-poordad.jpg",
+    synopsis: "Rich Dad Poor Dad contrasts the financial mindsets of two father figures who shape Robert Kiyosaki’s understanding of money. Through their opposing lessons, the book challenges traditional beliefs about wealth and emphasizes financial education, assets, and making money work for you rather than working for money.",
+    series: null,
+    reviews: [
+      { reviewer: "Scarlette J.", rating: 5, review: "A personal finance book that compares two mindsets to explain how wealth is built."},
+      { reviewer: "Robert S.", rating: 4, review: "Shows the difference between working for money and making money work for you." },
+      { reviewer: "Percy J.", rating: 5, review: "Focuses on financial education, assets, and changing how you think about money." }
+    ]
+  },
+  {
+    id: 15,
+    title: "The Burning Library",
+    author: "Gilly Macmillan",
+    genre: "fiction",
+    rating: 3.4,
+    cover: "images/books/the-burning-library.jpg",
+    synopsis: "A thrilling dark-academia tale of murder, obsession and ruthless ambition set in remote St Andrews, Scotland.",
+    series: null,
+    reviews: [
+      { reviewer: "Annabeth C.", rating: 4, review: "A clever dark‑academia mystery where ancient manuscripts and secret societies collide."},
+      { reviewer: "Anya F.", rating: 4, review: "Atmospheric, twisty, and intellectual—with historical conspiracies wrapped around danger." },
+      { reviewer: "Ayayse F.", rating: 5, review: "A slow‑burn thriller that rewards curious readers with a complex puzzle and layered intrigue." }
+    ]
+  },
+  {
+    id: 16,
+    title: "A Good Girl's Guide to Murder",
+    author: "Holly Jackson",
+    genre: "thriller",
+    rating: 3.4,
+    cover: "images/books/ggg-to-murder.jpg",
+    synopsis: "Pip investigates a closed murder case for school, uncovering secrets that challenge the town’s story and put her in danger as she searches for the real killer.",
+    series: {
+      prequels: [],
+      sequels: [
+        "Good Girl, Bad Blood",
+        "As Good As Dead",
+        "Kill Joy",
+        "Five Survive",
+        "The Reappearance of Rachel Price",
+        "Not Quite Dead Yet"
+      ]
+    },
+    reviews: [
+      { reviewer: "Babara J.", rating: 5, review: "A gripping YA mystery that keeps you guessing right to the end."},
+      { reviewer: "Yuri B.", rating: 4, review: "Fresh, clever investigative storytelling with a fierce teen sleuth at the cente." },
+      { reviewer: "Will S.", rating: 5, review: "Twisty, addictive, and perfect for fans of crime puzzles and small‑town secrets" }
+    ]
+  },
+  {
+    id: 17,
+    title: "The Historical Years: holocaust 1933-1945",
+    author: "Frank McDonough",
+    genre: "historical",
+    rating: 4.6,
+    cover: "images/books/hitler-years.jpg",
+    synopsis: "A detailed history of Nazi Germany showing how Hitler’s policies led to the Holocaust, with eyewitness accounts and year-by-year events.",
+    series: null,
+    reviews: [
+      { reviewer: "Loid F.", rating: 5, review: "A vivid, meticulous history that brings the horrors of the Holocaust into sharp focus."},
+      { reviewer: "Nanami K.", rating: 4, review: "Essential reading for understanding how Nazi policies became genocide."},
+      { reviewer: "Zack M.", rating: 5, review: "Scholarly, powerful, and deeply human in its testimony and analysis." }
     ]
   }
 ];
